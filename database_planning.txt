@@ -1,0 +1,122 @@
+{
+    "profiles" : {
+        // TODO: Add functionality for photos. 
+        "user_uuid" : { //.getAuth.getUser(uuid)
+            "username" : "sarahrm10"
+            "name" : "Sarah McCarthy", // Get from authuser
+            "email" : "sarahrm@stanford.edu", // Get from authuser
+            "phone" : 510-555-5555, // Get from authuser
+            "photo_url" : https, // Get from authuser
+            "venmo" : "sarahrm10", 
+            "tags" : { // Firestore has arrays!
+                "has_costco_membership",
+                "no_car"
+            },
+            "friends" : { // Right now, not clickable
+                "vhelm",
+                "jasminz"
+            },
+            "tasks_ownwer" : {
+                ref_to_task1,
+                ref_to_task2,
+            },
+            "tasks_yes" : {
+                ref_to_task1,
+                ref_to_task2,
+            },
+            "tasks_maybe" : {
+                ref_to_task1,
+                ref_to_task2,
+            },
+            "groups" : {
+                "CS194", 
+                "RAs"
+            }
+            "date_joined" : 2939120391,           
+        },
+        "username2" : {} 
+    },
+    "tasks" : {
+        // TODO: Add photos to tasks
+        "uuid_task1": {
+            "owner" : "sarahrm",
+            "title" : "Go to Target", 
+            "date_created" : 123218317,
+            "event_date" : 12382129837,
+            "meetup_location" : "Tresidder Parking Lot",
+            "destinations" : { // Firestore has arrays!
+                "target", 
+                "costco"
+            },
+            "max_num_people" : null or #, 
+            "groups" : { // Firestore has arrays!
+                "dorm",
+                "CS194"
+            },
+            "blocked_from_task" : { // Could be empty
+                "Aga"
+            },
+            "tags" : {
+                "fun",
+                "errands"
+            },
+            "desc" : "Woah, I am so fun. Come hang", 
+            "rvsps" : {
+                "yes" : { // Firestore has arrays!
+                    "Amy",
+                    "Victoria"
+                },
+                "no" : { // Firestore has arrays!
+                    "Jin-Hee",
+                    "Phil"
+                },
+                "interested" : { // Firestore has arrays!
+                    "Sarah"
+                }
+            },
+        },
+        "uuid_task2": {},
+    },
+    "groups" : {
+        "uuid_group1" : {
+            "name" : "CS194", 
+            "admin" : { // Firestore has arrays!
+                "selainerodriguez",
+                "yazminpa"
+            }, 
+            "members" : { // Firestore has arrays!
+                "vhelm",
+                "safiyahL"
+            },
+            "open_tasks" : { 
+                ref_to_task1,
+                ref_to_task3,
+            },
+            "date_created" : 2938128,
+            "tags" : { // Firestore has arrays!
+                "friends",
+                "casual"
+            },
+            "group_icon" : https//kjdaj;dk.com,     
+        },
+    }, 
+    "person_tasks" : {
+        "user_uuid1" : {
+            "upcoming" : {}, 
+            "interested": {}, 
+            "completed" :{} 
+        },
+        "user_uuid2" : {
+            "upcoming" : {
+                "uuid_task1": ref_to_task1,
+                "uuid_task3" : ref_to_task3,
+            }, 
+            "interested": {
+                "uuid_task2" : ref_to_task2
+            }, 
+            "completed" : {
+                "uuid_task4" : ref_to_task4
+            } 
+        },
+    }
+}
